@@ -1136,7 +1136,35 @@ footer p { margin: 0; font-size: 14px; }
    =================================================== */
 
 @media (max-width: 992px) {
+    /* Services grid */
     .services-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Hero - tablet */
+    .hero-main { padding: 20px 4%; gap: 25px; }
+    .hero-logo img { height: 90px; padding: 8px 12px; }
+    .hero-text h1 { font-size: 34px; }
+    .hero-text > p { font-size: 16px; }
+    .hero-badges span { font-size: 14px; }
+    .hero-phone { font-size: 20px; }
+    .hero-contact { margin-right: 0; }
+    .hero-logo { margin-left: 0; }
+
+    /* Nav - tablet */
+    .nav-links a { padding: 18px 10px; font-size: 11px; }
+    .phone-num { font-size: 14px; }
+    .social-btn { width: 32px; height: 32px; font-size: 16px; }
+
+    /* Content */
+    .about-section { margin: 15px 3%; }
+    .main-content { margin: 20px 3%; }
+    .content-container { margin: 20px 3%; }
+    .form-card { max-width: 90%; }
+
+    /* About grid */
+    .about-grid { gap: 20px; }
+
+    /* Gallery */
+    .gallery img { height: 380px; }
 }
 
 @media (max-width: 768px) {
