@@ -2,65 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | HandyMaster Pro - Mississauga & GTA</title>
+    <meta name="description" content="Frequently asked questions about HandyMaster Pro handyman services. Service areas, pricing, estimates, insurance, materials, and weekend availability.">
+    <link rel="canonical" href="https://handymasterpro.ca/faq.html">
+    <meta property="og:title" content="FAQ | HandyMaster Pro">
+    <meta property="og:description" content="Common questions about our handyman services in Mississauga & GTA.">
+    <meta property="og:url" content="https://handymasterpro.ca/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - HandyMaster Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        :root { --dark-blue: #1a237e; --bright-red: #d32f2f; --whatsapp-green: #25d366; }
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        
-        /* Идентичный Header */
-        header { background: white; border-bottom: 3px solid var(--bright-red); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo-area img { height: 70px; width: auto; display: block; }
-        .contact-group { display: flex; align-items: center; gap: 20px; }
-        .phone-num { font-size: 22px; color: var(--bright-red); font-weight: bold; text-decoration: none; }
-        .social-link { font-size: 30px; text-decoration: none; transition: 0.3s; }
-        .fa-whatsapp { color: var(--whatsapp-green); }
-        .fa-instagram { color: #E4405F; }
-
-        nav { background: var(--dark-blue); padding: 12px 5%; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px; }
-        nav a:hover { color: #ffeb3b; }
-
-        .faq-container { max-width: 900px; margin: 40px auto; padding: 0 20px; min-height: 60vh; }
-        h1 { text-align: center; color: var(--dark-blue); margin-bottom: 30px; text-transform: uppercase; }
-        
-        .faq-item { background: white; margin-bottom: 10px; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border: 1px solid #ddd; }
-        .faq-question { background: white; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: var(--dark-blue); }
-        .faq-question i { color: var(--bright-red); transition: 0.3s; }
-        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease-out; background: #fff; color: #555; }
-        .faq-item.active .faq-answer { max-height: 500px; padding: 20px; border-top: 1px solid #eee; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); }
-
-        .cta-box { text-align: center; margin-top: 50px; background: var(--dark-blue); color: white; padding: 30px; border-radius: 8px; }
-        .cta-btn { background: var(--bright-red); color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 15px; }
-
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
-
-        @media (max-width: 768px) { .contact-group { gap: 10px; } .phone-num { font-size: 18px; } }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9YFG3G95Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R9YFG3G95Y');
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What areas do you serve?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We proudly serve the Greater Toronto Area (GTA) and Halton Region, including Milton, Oakville, Burlington, Mississauga, Hamilton, Kitchener, and Guelph." }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you provide free estimates?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes! We provide free rough estimates over the phone or via WhatsApp if you send us photos of the project. For complex on-site assessments, a small consultation fee may apply, which is then deducted from your final invoice." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you charge: hourly or flat rate?",
+                "acceptedAnswer": { "@type": "Answer", "text": "It depends on the job. Small repairs are usually charged at a competitive hourly rate with a 2-hour minimum. Larger projects like flooring or painting are provided as a fixed-price (flat rate) quote." }
+            },
+            {
+                "@type": "Question",
+                "name": "Are you insured and licensed?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. HandyMaster Pro is a fully registered business in Ontario. We carry liability insurance to ensure your property and our team are protected during every job." }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to provide tools or materials?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We bring all the professional tools required for the job. Regarding materials (like paint, tiles, or specific fixtures), you can provide them yourself, or we can pick them up for you for an additional delivery fee." }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you work on weekends?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, we understand that our clients have busy schedules. We offer weekend appointments by request to ensure your home repairs don't interfere with your work week." }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 
-<header>
-   <div class="logo-area">
-    <a href="index.html">
-        <img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro Logo" style="height: 70px; width: auto; display: block;"></a>
-</div>
-    <div class="contact-group">
-        <a href="https://wa.me/14372547774" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/handymasterio" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="tel:+14372547774" class="phone-num">+1 (437) 254-7774</a>
+<nav>
+    <div class="nav-logo">
+        <a href="index.html"><img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro"></a>
     </div>
-</header>
-
-<nav style="background: #1a237e; padding: 10px 5%; text-align: center;">
-    <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">Home</a>
-    <a href="emergency.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">EMERGENCY</a>
-    <a href="about.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">About Us</a>
-    <a href="faq.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 14px;">FAQ</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="emergency.html">Emergency</a>
+        <a href="about.html">About Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="estimate.html">Free Estimate</a>
+    </div>
+    <div class="nav-contact">
+        <a href="tel:+14372547774" class="phone-num"><i class="fas fa-phone-alt"></i> (437) 254-7774</a>
+        <a href="https://wa.me/14372547774" class="social-btn social-btn-wa" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/handymasterio" class="social-btn social-btn-ig" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
 </nav>
 
 <div class="faq-container">
@@ -102,23 +123,44 @@
     </div>
 </div>
 
-<a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" viewBox="0 0 16 16">
-        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-    </svg>
-</a>
-
 <footer>
-    <p style="text-align: center; padding: 20px; background: #222; color: #777; margin: 0;">© 2026 HandyMaster Pro. Licensed & Insured.</p>
+    <div class="footer-logo">
+        <a href="index.html"><img src="https://i.postimg.cc/FsT9NSJM/IMG-1533.png" alt="HandyMaster Pro"></a>
+    </div>
+    <div class="footer-socials">
+        <a href="tel:+14372547774" class="social-btn-phone" aria-label="Call us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/14372547774" class="social-btn-wa" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/handymasterio" class="social-btn-ig" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2026 HandyMaster Pro. Fully Licensed & Insured. Serving Mississauga, Oakville, Milton & GTA.</p>
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="accessibility.html">Accessibility</a>
+    </div>
 </footer>
 
-<script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-        button.addEventListener('click', () => {
-            const faqItem = button.parentElement;
-            faqItem.classList.toggle('active');
-        });
-    });
-</script>
+<button class="a11y-toggle" aria-label="Accessibility options"><i class="fas fa-universal-access"></i></button>
+<div class="a11y-panel" role="dialog" aria-label="Accessibility settings">
+    <h3><i class="fas fa-universal-access"></i> Accessibility</h3>
+    <button class="a11y-btn" data-a11y="increase"><i class="fas fa-plus"></i> Increase Text Size</button>
+    <button class="a11y-btn" data-a11y="decrease"><i class="fas fa-minus"></i> Decrease Text Size</button>
+    <button class="a11y-btn" data-a11y="contrast"><i class="fas fa-adjust"></i> High Contrast</button>
+    <button class="a11y-reset" data-a11y="reset"><i class="fas fa-undo"></i> Reset All Settings</button>
+</div>
+
+<a href="https://wa.me/14372547774" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <p>This website uses cookies for analytics and embedded content to improve your experience. <a href="privacy.html">Privacy Policy</a></p>
+    <div class="cookie-buttons">
+        <button class="cookie-btn cookie-accept">Accept All</button>
+        <button class="cookie-btn cookie-necessary">Necessary Only</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
