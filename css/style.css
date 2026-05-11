@@ -1262,6 +1262,32 @@ footer p { margin: 0; font-size: 14px; }
     line-height: 1.6;
 }
 
+/* --- Language Switcher --- */
+.lang-switcher {
+    display: flex;
+    gap: 4px;
+    margin-left: 10px;
+}
+
+.lang-switcher a {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.lang-switcher a:hover,
+.lang-switcher a.active {
+    color: white;
+    background: rgba(255,255,255,0.15);
+}
+
 /* --- Sticky Mobile CTA Bar --- */
 .mobile-cta {
     display: none;
