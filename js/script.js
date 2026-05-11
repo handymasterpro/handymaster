@@ -5,11 +5,24 @@
     var currentSlide = 0;
     var slides = gallery.querySelectorAll('img');
     if (slides.length === 0) return;
+
+    // Add counter element
+    var counter = document.createElement('div');
+    counter.className = 'gallery-counter';
+    gallery.appendChild(counter);
+
+    function updateCounter() {
+        counter.textContent = (currentSlide + 1) + ' / ' + slides.length;
+    }
+
     function changeSlide(direction) {
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + direction + slides.length) % slides.length;
         slides[currentSlide].classList.add('active');
+        updateCounter();
     }
+
+    updateCounter();
     var prevBtn = gallery.querySelector('.prev');
     var nextBtn = gallery.querySelector('.next');
     if (prevBtn) prevBtn.addEventListener('click', function() { changeSlide(-1); });
