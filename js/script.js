@@ -1,3 +1,30 @@
+/* Language Auto-Redirect */
+(function() {
+    // Only redirect from English homepage
+    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
+    // Don't redirect if user already chose a language
+    if (localStorage.getItem('langChoice')) return;
+
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var redirect = '';
+
+    if (lang.startsWith('fr')) redirect = '/fr/';
+    else if (lang.startsWith('es')) redirect = '/es/';
+    else if (lang.startsWith('uk') || lang.startsWith('ru')) redirect = '/uk/';
+
+    if (redirect) {
+        localStorage.setItem('langChoice', 'auto');
+        window.location.href = redirect;
+    }
+})();
+
+/* Save language choice when clicking lang switcher */
+document.addEventListener('click', function(e) {
+    if (e.target.closest && e.target.closest('.lang-switcher')) {
+        localStorage.setItem('langChoice', 'manual');
+    }
+});
+
 /* Gallery Carousel */
 (function() {
     var gallery = document.querySelector('.gallery');
