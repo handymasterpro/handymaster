@@ -220,6 +220,36 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://handymasterpro.ca/tv-mounting.html</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://handymasterpro.ca/bathroom.html</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://handymasterpro.ca/kitchen.html</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://handymasterpro.ca/tiling.html</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://handymasterpro.ca/smart-home.html</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
     <!-- Info pages (English only) -->
     <url>
