@@ -37,11 +37,12 @@ input, textarea, select, button { font-family: inherit; font-size: inherit; }
     --color-border-light: #eee;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Roboto', sans-serif;
+    --transition: 0.3s;
+    --radius-md: 6px;
+    --radius-lg: 12px;
 }
 
-/* --- Base / Reset --- */
-*, *::before, *::after { box-sizing: border-box; }
-
+/* --- Base --- */
 html { scroll-behavior: smooth; }
 
 body {
@@ -55,8 +56,6 @@ body {
     font-size: 1.125rem;
 }
 
-img { max-width: 100%; height: auto; }
-
 a { transition: 0.3s; }
 
 /* --- Typography --- */
@@ -65,15 +64,6 @@ h1, h2, h3 { font-family: var(--font-heading); }
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
-
-/* --- Utility Classes --- */
-.text-highlight { color: var(--color-highlight); }
-.text-primary { color: var(--color-primary); }
-.text-center { text-align: center; }
-.text-muted { color: var(--color-text-muted); }
-
-/* --- Header (hidden, merged into nav) --- */
-header { display: none; }
 
 /* --- Navigation Bar (combined logo + nav + contacts) --- */
 nav {
@@ -264,22 +254,6 @@ nav {
     background: rgba(255,255,255,0.08);
 }
 
-/* Legacy .hero-premium for other uses */
-.hero-premium {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: white;
-    padding: 40px 5%;
-    margin-bottom: 20px;
-}
-
-.hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-}
 
 .hero-text h1 {
     font-size: 42px;
@@ -328,27 +302,6 @@ nav {
 
 .btn-primary:hover { background: var(--color-accent-dark); transform: translateY(-2px); }
 
-.hero-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 25px 30px;
-    border-radius: 12px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 280px;
-    flex-shrink: 0;
-    text-align: center;
-}
-
-.hero-card h3 { margin: 0 0 10px 0; font-size: 18px; }
-.hero-card .card-note { font-size: 14px; opacity: 0.8; margin-top: 10px; }
-
-.card-action a {
-    color: var(--color-highlight);
-    font-size: 26px;
-    font-weight: bold;
-    text-decoration: none;
-}
 
 /* --- Profile Photo (Homepage) --- */
 .profile-photo-container {
@@ -1489,26 +1442,19 @@ footer p { margin: 0; font-size: 14px; }
     .area-card p { font-size: 0.85rem; }
 
     /* Emergency page mobile */
-    .emergency-hero { padding: 25px 15px; }
-    .emergency-hero h1 { font-size: 22px; }
+    .emergency-hero { padding: 30px 15px; }
+    .emergency-hero h1 { font-size: 24px; }
     .emergency-hero p { font-size: 15px; }
     .emergency-list { grid-template-columns: 1fr; padding: 0 10px; gap: 12px; }
     .e-item { padding: 18px; }
     .e-item i { font-size: 24px; margin-bottom: 10px; }
     .e-item h3 { font-size: 18px; }
     .e-item p { font-size: 0.85rem; }
-    .call-now-box { margin: 25px 10px; padding: 20px 15px; }
+    .call-now-box { margin: 30px 10px; padding: 25px 15px; }
     .call-now-box h2 { font-size: 1.2rem; }
-    .big-phone { font-size: 22px; }
+    .big-phone { font-size: 24px; }
     .btn-emergency-wa { font-size: 16px; padding: 14px 25px; }
     .reviews-container { padding: 0 10px; }
-
-    /* Emergency */
-    .emergency-list { grid-template-columns: 1fr; padding: 0 10px; }
-    .emergency-hero h1 { font-size: 24px; }
-    .emergency-hero { padding: 30px 15px; }
-    .big-phone { font-size: 24px; }
-    .call-now-box { margin: 30px 10px; padding: 25px 15px; }
 
     /* Estimate form */
     .form-card { margin: 10px; padding: 20px; }
@@ -1535,17 +1481,12 @@ footer p { margin: 0; font-size: 14px; }
     .cookie-banner p { font-size: 13px; min-width: auto; }
     .cookie-buttons { justify-content: center; }
 
-    /* Floating buttons */
-    .whatsapp-float { width: 48px; height: 48px; bottom: 20px; right: 12px; border-width: 2px; }
-    .whatsapp-float .fa-whatsapp { font-size: 24px; }
-    .a11y-toggle { width: 42px; height: 42px; bottom: 15px; left: 12px; font-size: 18px; border-width: 2px; opacity: 0.7; }
-    .a11y-toggle:hover { opacity: 1; }
-    .a11y-panel { bottom: 80px; left: 10px; min-width: 230px; padding: 15px; }
+    /* Mobile: show CTA bar, hide WhatsApp float */
     .mobile-cta { display: block; }
     .whatsapp-float { display: none; }
-    .a11y-toggle { bottom: 65px; left: 8px; width: 38px; height: 38px; font-size: 16px; }
-    .a11y-panel { bottom: 110px; }
-    .areas-grid { grid-template-columns: 1fr; }
+    .a11y-toggle { bottom: 65px; left: 8px; width: 38px; height: 38px; font-size: 16px; border-width: 2px; opacity: 0.7; }
+    .a11y-toggle:hover { opacity: 1; }
+    .a11y-panel { bottom: 110px; left: 10px; min-width: 230px; padding: 15px; }
     .how-it-works { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .cookie-banner.active { padding-bottom: 70px; }
 }

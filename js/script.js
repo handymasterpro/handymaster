@@ -1,22 +1,6 @@
-/* Language Auto-Redirect */
-(function() {
-    // Only redirect from English homepage
-    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
-    // Don't redirect if user already chose a language
-    if (localStorage.getItem('langChoice')) return;
-
-    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    var redirect = '';
-
-    if (lang.startsWith('fr')) redirect = '/fr/';
-    else if (lang.startsWith('es')) redirect = '/es/';
-    else if (lang.startsWith('uk') || lang.startsWith('ru')) redirect = '/uk/';
-
-    if (redirect) {
-        localStorage.setItem('langChoice', 'auto');
-        window.location.href = redirect;
-    }
-})();
+/* Language Auto-Redirect REMOVED -- Google warns against JS redirects by browser language.
+   hreflang tags handle language serving in search results.
+   Users can switch language via the lang-switcher in nav. */
 
 /* Save language choice when clicking lang switcher */
 document.addEventListener('click', function(e) {
@@ -68,20 +52,34 @@ document.addEventListener('click', function(e) {
     });
 })();
 
+/* Google Analytics -- only loads after cookie consent */
+function loadGA() {
+    if (document.querySelector('script[src*="googletagmanager"]')) return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-R9YFG3G95Y';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9YFG3G95Y');
+}
+
 /* Cookie Consent */
 (function() {
+    var consent = localStorage.getItem('cookieConsent');
+    if (consent === 'accepted') { loadGA(); }
+
     var banner = document.querySelector('.cookie-banner');
     if (!banner) return;
-    if (localStorage.getItem('cookieConsent')) return;
+    if (consent) return;
     banner.classList.add('active');
     var acceptBtn = banner.querySelector('.cookie-accept');
     var necessaryBtn = banner.querySelector('.cookie-necessary');
     function closeBanner(choice) {
         localStorage.setItem('cookieConsent', choice);
         banner.classList.remove('active');
-        if (choice === 'necessary') {
-            window['ga-disable-G-R9YFG3G95Y'] = true;
-        }
+        if (choice === 'accepted') { loadGA(); }
     }
     if (acceptBtn) acceptBtn.addEventListener('click', function() { closeBanner('accepted'); });
     if (necessaryBtn) necessaryBtn.addEventListener('click', function() { closeBanner('necessary'); });
