@@ -14,6 +14,7 @@
     <meta property="og:title" content="Handyman Services in Mississauga | HandyMaster Pro">
     <meta property="og:description" content="Trusted handyman services in Mississauga & GTA. Repairs, painting, flooring & more. Free estimates. Call HandyMaster Pro today!">
     <meta property="og:url" content="https://handymasterpro.ca/">
+    <meta property="og:image" content="https://i.postimg.cc/FsT9NSJM/IMG-1533.png">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_CA">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -36,7 +37,9 @@
         "@context": "https://schema.org",
         "@type": "HomeAndConstructionBusiness",
         "name": "HandyMaster Pro",
+        "description": "Professional handyman and home repair services in Mississauga, Oakville, Milton and the Greater Toronto Area. Licensed and insured with over 10 years of experience.",
         "image": "https://i.postimg.cc/FsT9NSJM/IMG-1533.png",
+        "logo": "https://i.postimg.cc/FsT9NSJM/IMG-1533.png",
         "url": "https://handymasterpro.ca",
         "telephone": "+14372547774",
         "address": {
@@ -45,7 +48,39 @@
             "addressRegion": "ON",
             "addressCountry": "CA"
         },
-        "areaServed": ["Mississauga", "Oakville", "Milton", "GTA"],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 43.5426145,
+            "longitude": -79.7610086
+        },
+        "areaServed": [
+            {"@type": "City", "name": "Mississauga"},
+            {"@type": "City", "name": "Oakville"},
+            {"@type": "City", "name": "Milton"},
+            {"@type": "City", "name": "Burlington"},
+            {"@type": "City", "name": "Hamilton"},
+            {"@type": "City", "name": "Kitchener"},
+            {"@type": "City", "name": "Guelph"},
+            {"@type": "AdministrativeArea", "name": "Greater Toronto Area"}
+        ],
+        "sameAs": [
+            "https://www.instagram.com/handymasterio",
+            "https://wa.me/14372547774"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Handyman Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Electrical Work", "url": "https://handymasterpro.ca/electrical.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior Painting", "url": "https://handymasterpro.ca/painting.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Furniture Assembly", "url": "https://handymasterpro.ca/furniture.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Drywall Repair", "url": "https://handymasterpro.ca/drywall.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Door & Window Installation", "url": "https://handymasterpro.ca/doors.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Flooring Installation", "url": "https://handymasterpro.ca/flooring.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deck Repair", "url": "https://handymasterpro.ca/deck.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "General Home Maintenance", "url": "https://handymasterpro.ca/maintenance.html"}}
+            ]
+        },
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
@@ -60,7 +95,17 @@
                 "closes": "18:00"
             }
         ],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "knowsLanguage": ["en", "ru", "uk"],
+        "paymentAccepted": "Cash, Credit Card, E-Transfer"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "HandyMaster Pro",
+        "url": "https://handymasterpro.ca"
     }
     </script>
 </head>
