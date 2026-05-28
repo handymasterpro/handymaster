@@ -5,7 +5,7 @@
     <!-- Homepage (4 languages) -->
     <url>
         <loc>https://handymasterpro.ca/</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/"/>
@@ -16,7 +16,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/fr/</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/"/>
@@ -27,7 +27,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/es/</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/"/>
@@ -38,7 +38,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/uk/</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/"/>
@@ -51,7 +51,7 @@
     <!-- About (4 languages) -->
     <url>
         <loc>https://handymasterpro.ca/about.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/about.html"/>
@@ -62,7 +62,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/fr/about.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/about.html"/>
@@ -73,7 +73,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/es/about.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/about.html"/>
@@ -84,7 +84,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/uk/about.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/about.html"/>
@@ -97,7 +97,7 @@
     <!-- Emergency (4 languages) -->
     <url>
         <loc>https://handymasterpro.ca/emergency.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/emergency.html"/>
@@ -108,7 +108,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/fr/emergency.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/emergency.html"/>
@@ -119,7 +119,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/es/emergency.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/emergency.html"/>
@@ -130,7 +130,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/uk/emergency.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/emergency.html"/>
@@ -143,7 +143,7 @@
     <!-- Estimate (4 languages) -->
     <url>
         <loc>https://handymasterpro.ca/estimate.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/estimate.html"/>
@@ -154,7 +154,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/fr/estimate.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/estimate.html"/>
@@ -165,7 +165,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/es/estimate.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/estimate.html"/>
@@ -176,7 +176,7 @@
     </url>
     <url>
         <loc>https://handymasterpro.ca/uk/estimate.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://handymasterpro.ca/estimate.html"/>
@@ -189,79 +189,79 @@
     <!-- Service pages (English only) -->
     <url>
         <loc>https://handymasterpro.ca/electrical.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/painting.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/furniture.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/drywall.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/doors.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/flooring.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/deck.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/maintenance.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/tv-mounting.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/bathroom.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/kitchen.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/tiling.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/smart-home.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -269,13 +269,13 @@
     <!-- Info pages (English only) -->
     <url>
         <loc>https://handymasterpro.ca/faq.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/areas.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -283,19 +283,19 @@
     <!-- Legal pages (English only) -->
     <url>
         <loc>https://handymasterpro.ca/privacy.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/terms.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://handymasterpro.ca/accessibility.html</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-05-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
