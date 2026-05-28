@@ -1823,6 +1823,11 @@ body.a11y-high-contrast input, body.a11y-high-contrast select, body.a11y-high-co
 }
 body.a11y-high-contrast footer { background: #000 !important; }
 body.a11y-high-contrast .footer-links a { color: #aaa !important; }
+body.a11y-high-contrast .review-card { background: #222 !important; border-color: #555 !important; }
+body.a11y-high-contrast .review-name { color: #ffeb3b !important; }
+body.a11y-high-contrast .review-text { color: #ddd !important; }
+body.a11y-high-contrast .review-date { color: #aaa !important; }
+body.a11y-high-contrast .review-service { background: #555 !important; }
 body.a11y-high-contrast img { filter: contrast(1.2) brightness(0.9); }
 body.a11y-high-contrast .a11y-btn { background: #222 !important; color: #fff !important; border-color: #555 !important; }
 body.a11y-high-contrast .a11y-btn:hover { background: #ffeb3b !important; color: #000 !important; }
