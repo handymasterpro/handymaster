@@ -155,3 +155,49 @@ function loadGA() {
         if (btnContrast) btnContrast.classList.remove('active');
     });
 })();
+
+/* Auto-select service from URL param (for localized estimate links) */
+(function() {
+    var params = new URLSearchParams(window.location.search);
+    var service = params.get('service');
+    if (!service) return;
+    var map = {
+        'electrical': 'Electrical', 'painting': 'Painting', 'furniture': 'Furniture',
+        'drywall': 'Drywall', 'doors': 'Doors & Windows', 'flooring': 'Flooring',
+        'deck': 'Deck & Fence', 'maintenance': 'General Handyman',
+        'tv-mounting': 'TV Mounting', 'bathroom': 'General Handyman',
+        'kitchen': 'General Handyman', 'tiling': 'Flooring', 'smart-home': 'Electrical'
+    };
+    var val = map[service];
+    if (!val) return;
+    var select = document.querySelector('select[name="service_category"]');
+    if (select) { select.value = val; }
+})();
+
+/* Elfsight CLS fallback */
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        var shells = document.querySelectorAll('.reviews-widget-shell');
+        shells.forEach(function(shell) {
+            var loading = shell.querySelector('.reviews-widget-loading');
+            var widget = shell.querySelector('iframe');
+            if (widget) {
+                if (loading) loading.style.display = 'none';
+            } else {
+                shell.style.minHeight = '0';
+                if (loading) loading.style.display = 'none';
+            }
+        });
+    }, 5000);
+});
+
+/* Services dropdown mobile toggle */
+document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+        if (window.innerWidth > 768) return;
+        e.preventDefault();
+        var parent = toggle.closest('.nav-dropdown');
+        parent.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', parent.classList.contains('active'));
+    });
+});

@@ -398,6 +398,36 @@ nav {
     justify-content: center;
 }
 
+/* --- Services Dropdown Nav --- */
+.nav-dropdown { position: relative; }
+.dropdown-toggle {
+    background: none; border: none; color: white; font: inherit;
+    cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 0;
+}
+.dropdown-arrow { stroke: currentColor; stroke-width: 2; fill: none; transition: transform .25s ease; }
+.dropdown-menu {
+    position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(8px);
+    min-width: 240px; background: #1a237e; border-radius: 12px; padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25); opacity: 0; visibility: hidden;
+    transition: opacity .22s ease, transform .22s ease, visibility .22s ease; z-index: 9999;
+}
+.dropdown-menu a {
+    display: block; padding: 10px 18px; color: white; text-decoration: none;
+    font-size: .9rem; transition: background .18s ease;
+}
+.dropdown-menu a:hover, .dropdown-menu a:focus { background: rgba(255,255,255,.1); }
+.nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu {
+    opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+
+/* hero-nav dropdown */
+.hero-nav .nav-dropdown { display: inline-block; }
+.hero-nav .dropdown-toggle { color: white; font-size: inherit; }
+.hero-nav .dropdown-menu { left: 0; transform: translateY(8px); }
+.hero-nav .nav-dropdown:hover .dropdown-menu,
+.hero-nav .nav-dropdown:focus-within .dropdown-menu { transform: translateY(0); }
+
 /* --- Reviews Section (Homepage) --- */
 .reviews-section {
     padding: 60px 5%;
@@ -485,6 +515,16 @@ nav {
     line-height: 1.6;
     color: #333;
     margin: 0;
+}
+
+.service-testimonials { margin: 50px 0; }
+.service-testimonials h2 { color: var(--color-primary); text-transform: uppercase; margin-bottom: 24px; }
+.service-testimonials .reviews-grid { max-width: 600px; }
+
+.reviews-widget-shell { position: relative; min-height: 600px; overflow: hidden; }
+.reviews-widget-loading {
+    position: absolute; inset: 0; display: flex; align-items: center;
+    justify-content: center; color: #999; font-size: .9rem; background: #fff; z-index: 1;
 }
 
 .reviews-source {
@@ -1570,6 +1610,18 @@ footer p { margin: 0; font-size: 14px; }
     /* Legal pages */
     .legal-content { margin: 15px 10px; padding: 25px; }
 
+    /* Dropdown mobile */
+    .nav-dropdown { width: 100%; }
+    .dropdown-toggle { width: 100%; justify-content: space-between; padding: 10px 0; }
+    .dropdown-menu {
+        position: static; opacity: 1; visibility: visible; transform: none;
+        display: none; box-shadow: none; background: rgba(255,255,255,.06);
+        width: 100%; margin: 6px 0; border-radius: 8px; min-width: auto;
+    }
+    .nav-dropdown.active .dropdown-menu { display: block; }
+    .nav-dropdown.active .dropdown-arrow { transform: rotate(180deg); }
+    .hero-nav .dropdown-menu { position: static; transform: none; left: auto; }
+
     /* Reviews & Map */
     .reviews-section { padding: 30px 3%; }
     .reviews-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -1823,6 +1875,9 @@ body.a11y-high-contrast input, body.a11y-high-contrast select, body.a11y-high-co
 }
 body.a11y-high-contrast footer { background: #000 !important; }
 body.a11y-high-contrast .footer-links a { color: #aaa !important; }
+body.a11y-high-contrast .dropdown-menu { background: #000 !important; border: 1px solid #555 !important; }
+body.a11y-high-contrast .dropdown-menu a { color: #ffeb3b !important; }
+body.a11y-high-contrast .dropdown-toggle { color: #ffeb3b !important; }
 body.a11y-high-contrast .review-card { background: #222 !important; border-color: #555 !important; }
 body.a11y-high-contrast .review-name { color: #ffeb3b !important; }
 body.a11y-high-contrast .review-text { color: #ddd !important; }
