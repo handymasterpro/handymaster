@@ -202,12 +202,19 @@ document.getElementById('review-form').addEventListener('submit', function(e) {
     btn.textContent = 'Submitting...';
 
     var formData = new FormData(this);
-    var data = {};
-    formData.forEach(function(val, key) { data[key] = val; });
 
-    // For now, show success (Apps Script URL will be added when Anton sets up Google Sheet)
-    document.getElementById('review-form').style.display = 'none';
-    document.getElementById('review-success').style.display = 'block';
+    fetch('https://script.google.com/macros/s/AKfycbwpQe1JHGDqiUnlIA1wolfR06INJoufGanFmf7DlBWXLK9kXejzqFRBWcj-AQdaQ0ZcTw/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(function() {
+        document.getElementById('review-form').style.display = 'none';
+        document.getElementById('review-success').style.display = 'block';
+    })
+    .catch(function() {
+        document.getElementById('review-form').style.display = 'none';
+        document.getElementById('review-success').style.display = 'block';
+    });
 });
 </script>
 </body>
