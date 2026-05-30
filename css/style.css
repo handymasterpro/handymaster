@@ -401,9 +401,16 @@ nav {
 /* --- Services Dropdown Nav --- */
 .nav-dropdown { position: relative; }
 .dropdown-toggle {
-    background: none; border: none; color: white; font: inherit;
-    cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 0;
+    background: none; border: none; cursor: pointer;
+    display: flex; align-items: center; gap: 4px;
+    font-family: var(--font-heading); font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.85); text-decoration: none;
+    transition: 0.3s; white-space: nowrap;
 }
+.nav-links .dropdown-toggle { font-size: 12px; padding: 19px 13px; }
+.hero-nav .dropdown-toggle { font-size: 13px; padding: 13px 22px; }
+.dropdown-toggle:hover { color: white; background: rgba(255,255,255,0.08); }
 .dropdown-arrow { stroke: currentColor; stroke-width: 2; fill: none; transition: transform .25s ease; }
 .dropdown-menu {
     position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(8px);
@@ -423,7 +430,6 @@ nav {
 
 /* hero-nav dropdown */
 .hero-nav .nav-dropdown { display: inline-block; }
-.hero-nav .dropdown-toggle { color: white; font-size: inherit; }
 .hero-nav .dropdown-menu { left: 0; transform: translateY(8px); }
 .hero-nav .nav-dropdown:hover .dropdown-menu,
 .hero-nav .nav-dropdown:focus-within .dropdown-menu { transform: translateY(0); }
