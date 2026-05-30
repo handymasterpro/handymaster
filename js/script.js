@@ -174,23 +174,6 @@ function loadGA() {
     if (select) { select.value = val; }
 })();
 
-/* Elfsight CLS fallback */
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        var shells = document.querySelectorAll('.reviews-widget-shell');
-        shells.forEach(function(shell) {
-            var loading = shell.querySelector('.reviews-widget-loading');
-            var widget = shell.querySelector('iframe');
-            if (widget) {
-                if (loading) loading.style.display = 'none';
-            } else {
-                shell.style.minHeight = '0';
-                if (loading) loading.style.display = 'none';
-            }
-        });
-    }, 5000);
-});
-
 /* Services dropdown mobile toggle */
 document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
     toggle.addEventListener('click', function(e) {

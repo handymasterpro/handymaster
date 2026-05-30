@@ -528,11 +528,21 @@ nav {
 .service-testimonials h2 { color: var(--color-primary); text-transform: uppercase; margin-bottom: 24px; }
 .service-testimonials .reviews-grid { max-width: 600px; }
 
-.reviews-widget-shell { position: relative; min-height: 600px; overflow: hidden; }
-.reviews-widget-loading {
-    position: absolute; inset: 0; display: flex; align-items: center;
-    justify-content: center; color: #999; font-size: .9rem; background: #fff; z-index: 1;
-}
+/* Star rating input */
+.star-rating { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; }
+.star-rating input { display: none; }
+.star-rating label { font-size: 2rem; color: #ccc; cursor: pointer; transition: color .15s; }
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label { color: #f9a825; }
+
+/* Review action buttons */
+.review-actions { display: flex; gap: 16px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+.review-actions .btn-review { padding: 14px 28px; border-radius: 8px; font-family: var(--font-heading); font-weight: 700; font-size: .9rem; text-decoration: none; text-transform: uppercase; letter-spacing: .5px; transition: .2s; }
+.review-actions .btn-review-primary { background: #d32f2f; color: #fff; }
+.review-actions .btn-review-primary:hover { background: #b71c1c; }
+.review-actions .btn-review-secondary { background: transparent; color: #1a237e; border: 2px solid #1a237e; }
+.review-actions .btn-review-secondary:hover { background: #1a237e; color: #fff; }
 
 .reviews-source {
     text-align: center;
