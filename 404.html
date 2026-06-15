@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
+    <script>
+        (function(){
+            var path = window.location.pathname;
+            var lower = path.toLowerCase();
+            if (path !== lower && /\.html$/i.test(path)) {
+                window.location.replace(lower + window.location.search + window.location.hash);
+            }
+        })();
+    </script>
     <title>Page Not Found | HandyMaster Pro</title>
     <meta name="description" content="The page you are looking for could not be found.">
     <link rel="icon" type="image/png" href="/favicon.png">
