@@ -52,7 +52,8 @@ document.addEventListener('click', function(e) {
     });
 })();
 
-/* Google Analytics -- only loads after cookie consent */
+/* Google Analytics -- only loads after cookie consent.
+   window.gtag is exposed so the telemetry block below (DL-012) can emit events. */
 function loadGA() {
     if (document.querySelector('script[src*="googletagmanager"]')) return;
     var s = document.createElement('script');
@@ -60,9 +61,9 @@ function loadGA() {
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-R9YFG3G95Y';
     document.head.appendChild(s);
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-R9YFG3G95Y');
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-R9YFG3G95Y');
 }
 
 /* Cookie Consent */
@@ -184,3 +185,100 @@ document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
         toggle.setAttribute('aria-expanded', parent.classList.contains('active'));
     });
 });
+
+/* ============================================================
+ * Telemetry Foundation (TD-018 discharge — spec: DL-012)
+ * Five ce_* events gated on cookieConsent === 'accepted'.
+ * No PII. One click-delegation listener + one throttled scroll.
+ * ============================================================ */
+(function() {
+    function hasConsent() {
+        try { return localStorage.getItem('cookieConsent') === 'accepted'; }
+        catch (e) { return false; }
+    }
+    function ceEvent(name, params) {
+        if (!hasConsent() || typeof window.gtag !== 'function') return;
+        try { window.gtag('event', name, params || {}); } catch (e) {}
+    }
+
+    function classifyPhoneSource(a) {
+        if (a.closest('.big-phone, .call-now-box')) return 'emergency';
+        if (a.closest('.mobile-cta')) return 'mobile_cta';
+        if (a.closest('.hero-contact, .hero-phone, .hero-home, .hero-main')) return 'hero';
+        if (a.closest('.footer-socials, footer')) return 'footer';
+        if (a.closest('nav')) return 'header';
+        return 'other';
+    }
+    function classifyWaSource(a) {
+        if (a.classList.contains('whatsapp-float')) return 'float';
+        if (a.closest('.btn-emergency-wa, .call-now-box')) return 'emergency';
+        if (a.closest('.mobile-cta')) return 'mobile_cta';
+        if (a.closest('.whatsapp-alt')) return 'estimate_alt';
+        if (a.closest('.cta-box')) return 'cta_box';
+        if (a.closest('.hero-socials, .hero-home, .hero-main')) return 'hero';
+        if (a.closest('.footer-socials, footer')) return 'footer';
+        if (a.closest('nav')) return 'header';
+        return 'other';
+    }
+
+    /* Phone + WhatsApp click delegation */
+    document.addEventListener('click', function(e) {
+        if (!e.target || !e.target.closest) return;
+        var tel = e.target.closest('a[href^="tel:"]');
+        if (tel) { ceEvent('ce_phone_click', { source: classifyPhoneSource(tel) }); return; }
+        var wa = e.target.closest('a[href*="wa.me/"]');
+        if (wa) { ceEvent('ce_whatsapp_click', { source: classifyWaSource(wa) }); }
+    });
+
+    /* Estimate form submit — fires only when HTML5 validation passes */
+    var estimateForm = document.querySelector('form[action*="formspree.io"]');
+    if (estimateForm) {
+        estimateForm.addEventListener('submit', function() {
+            if (typeof estimateForm.checkValidity === 'function' && !estimateForm.checkValidity()) return;
+            var serviceEl = estimateForm.querySelector('[name="service_category"]');
+            var cityEl = estimateForm.querySelector('[name="client_city"]');
+            ceEvent('ce_form_submit', {
+                form: 'estimate',
+                service: serviceEl ? serviceEl.value : '',
+                city: cityEl ? cityEl.value : ''
+            });
+        });
+    }
+
+    /* Scroll depth 75% — fires once per page, then self-detaches */
+    var scroll75Fired = false;
+    var scrollTimer = null;
+    function checkScroll75() {
+        if (scroll75Fired) return;
+        var doc = document.scrollingElement || document.documentElement;
+        var viewport = window.innerHeight || doc.clientHeight;
+        var total = doc.scrollHeight;
+        if (total <= viewport) return; /* page shorter than viewport — never fires */
+        var scrolled = (window.pageYOffset || doc.scrollTop) + viewport;
+        if (scrolled >= total * 0.75) {
+            scroll75Fired = true;
+            window.removeEventListener('scroll', onScroll);
+            ceEvent('ce_scroll_75', {});
+        }
+    }
+    function onScroll() {
+        if (scrollTimer) return;
+        scrollTimer = setTimeout(function() { scrollTimer = null; checkScroll75(); }, 200);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* FAQ open — fires only on the open transition (not on close) */
+    var faqContainer = document.querySelector('.faq-container');
+    if (faqContainer) {
+        faqContainer.addEventListener('click', function(e) {
+            if (!e.target || !e.target.closest) return;
+            var question = e.target.closest('.faq-question');
+            if (!question) return;
+            var item = question.parentElement;
+            if (!item || !item.classList.contains('active')) return; /* class toggled by FAQ handler above; .active = just opened */
+            var items = faqContainer.querySelectorAll('.faq-item');
+            var idx = Array.prototype.indexOf.call(items, item) + 1;
+            ceEvent('ce_faq_open', { index: idx });
+        });
+    }
+})();
