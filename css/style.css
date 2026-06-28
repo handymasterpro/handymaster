@@ -16,6 +16,29 @@
     border: 0;
 }
 
+/* --- Skip-to-content link (WCAG 2.4.1 — TD-013) ---
+   Off-screen until keyboard focus, then visible top-left.
+   z-index 10000 sits above cookie banner (9999) so it is never obscured. */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 10000;
+    padding: 12px 18px;
+    background: #1a237e;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0 0 6px 0;
+    transition: top 0.2s ease;
+}
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #ffeb3b;
+    outline-offset: 2px;
+}
+
 /* --- Browser Reset --- */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -1845,6 +1868,14 @@ footer p { margin: 0; font-size: 14px; }
 body.a11y-high-contrast {
     background: #000 !important;
     color: #fff !important;
+}
+
+body.a11y-high-contrast .skip-link {
+    background: #ffeb3b !important;
+    color: #000 !important;
+}
+body.a11y-high-contrast .skip-link:focus {
+    outline-color: #fff !important;
 }
 
 body.a11y-high-contrast header,
