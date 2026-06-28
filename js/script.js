@@ -38,7 +38,13 @@ document.addEventListener('click', function(e) {
     var nextBtn = gallery.querySelector('.next');
     if (prevBtn) prevBtn.addEventListener('click', function() { changeSlide(-1); });
     if (nextBtn) nextBtn.addEventListener('click', function() { changeSlide(1); });
-    setInterval(function() { changeSlide(1); }, 5000);
+    /* Honour prefers-reduced-motion (TD-017): skip autoplay for users who
+       opt out of motion. Manual prev/next still work. */
+    var prefersReducedMotion = window.matchMedia
+        && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion) {
+        setInterval(function() { changeSlide(1); }, 5000);
+    }
 })();
 
 /* FAQ Accordion */

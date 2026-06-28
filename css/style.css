@@ -1934,3 +1934,21 @@ body.a11y-high-contrast .review-service { background: #555 !important; }
 body.a11y-high-contrast img { filter: contrast(1.2) brightness(0.9); }
 body.a11y-high-contrast .a11y-btn { background: #222 !important; color: #fff !important; border-color: #555 !important; }
 body.a11y-high-contrast .a11y-btn:hover { background: #ffeb3b !important; color: #000 !important; }
+
+/* ============================================================
+   Reduced Motion (TD-017) — WCAG 2.3.3 Animation from Interactions
+   Respects OS-level "Reduce Motion" / "Prefer reduced motion" setting.
+   Collapses transitions and animations to instant, kills smooth scroll,
+   and stops the gallery autoplay (paired guard in js/script.js).
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        transition-delay: 0ms !important;
+        scroll-behavior: auto !important;
+    }
+}
